@@ -1,0 +1,24 @@
+[package]
+name = "rusty-osu"
+version = "0.1.0"
+authors = ["Dawid C <dcz31249@gmail.com>"]
+edition = "2018"
+
+[profile.release]
+opt-level = 'z'  # Optimize for size.
+lto = true
+panic = 'abort'
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+glutin = "0.24"
+skia-safe =  { version = "0", features = ["gl", "textlayout"] }
+gl = "0.14.0"
+specs = "0.16.1"
+rand = "0.7.3"
+splines = "3.4.1"
+log = "0.4"
+simple_logger = "1.11.0"
+kira = "0.4.1"
+float-ord = "0.2.0"
